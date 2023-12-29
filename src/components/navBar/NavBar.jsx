@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import './nav.css'
 import Logo from "../logo/Logo";
 import SearchBar from "../searchBar/SearchBar";
+import Btn from "../buttons/Btn";
 
 const NavBar = () => {
 
@@ -34,8 +35,9 @@ const NavBar = () => {
                             </label>
                         </div>
                         <div className="flex-none max-lg:hidden">
-                            <ul className="menu main-nav menu-horizontal">
-                                <li>Hello</li>
+                            <ul className="menu main-nav gap-2 menu-horizontal">
+                                <Btn v={'v1'}>Register</Btn>
+                                <Btn v={'v2'}>Login</Btn>
                             </ul>
                         </div>
                     </div>

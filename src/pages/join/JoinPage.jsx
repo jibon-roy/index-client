@@ -1,5 +1,5 @@
 
-const Notices = () => {
+const JoinPage = () => {
     return (
         <div>
 
@@ -7,4 +7,4 @@ const Notices = () => {
     );
 };
 
-export default Notices;
+export default JoinPage;
