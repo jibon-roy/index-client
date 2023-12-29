@@ -8,8 +8,15 @@
 
 .main-nav .active,
 .main-nav .active:hover {
-    background-color: transparent !important;
+    background-color: #176FAE !important;
     border-radius: 0 !important;
-    border-bottom: 4px solid #F5F5F5;
+    border-bottom: 2px solid #F5F5F5;
     border-radius: 0;
+}
+
+ul .searchBtn,
+ul .searchBtn:hover,
+ul .searchBtn:active,
+ul .searchBtn:focus {
+    background-color: transparent !important;
 }
