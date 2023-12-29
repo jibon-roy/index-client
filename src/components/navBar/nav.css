@@ -1,14 +1,15 @@
 .main-nav a {
     color: #F5F5F5 !important;
     font-weight: 600 !important;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+    border-radius: 0;
 }
 
 .main-nav .active,
 .main-nav .active:hover {
-    background-color: #176FAE !important;
-}
-
-
-.main-nav a {
     background-color: transparent !important;
+    border-radius: 0 !important;
+    border-bottom: 4px solid #F5F5F5;
+    border-radius: 0;
 }
