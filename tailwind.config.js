@@ -9,7 +9,7 @@ export default {
       "primary-white": "#F5F5F5",
       "primary-blue": "#1C98ED",
       "primary-black": "#333333",
-      "secondary-blue": "#3899c7",
+      "secondary-blue": "#176FAE",
       "secondary-white": "#F0F2F5",
       "secondary-white-hover": "#D9DBE1",
       "white": "#FFFFFF"

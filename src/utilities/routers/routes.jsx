@@ -7,6 +7,7 @@ import Notices from "../../pages/notices/Notices";
 import Profile from "../../pages/profile/Profile";
 import Login from "../../pages/login/Login";
 import Register from "../../pages/register/Register";
+import JoinPage from "../../pages/join/JoinPage";
 
 
 const routes = createBrowserRouter([
@@ -35,6 +36,10 @@ const routes = createBrowserRouter([
                 element: <Profile />
             },
         ]
+    },
+    {
+        path: '/join',
+        element: <JoinPage />
     },
     {
         path: '/login',

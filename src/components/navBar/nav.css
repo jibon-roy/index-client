@@ -20,3 +20,7 @@ ul .searchBtn:active,
 ul .searchBtn:focus {
     background-color: transparent !important;
 }
+
+.menu-horizontal {
+    padding: 0 !important;
+}
