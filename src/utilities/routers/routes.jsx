@@ -8,12 +8,14 @@ import Profile from "../../pages/profile/Profile";
 import Login from "../../pages/login/Login";
 import Register from "../../pages/register/Register";
 import JoinPage from "../../pages/join/JoinPage";
+import Error from "../../pages/error/Error";
 
 
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout />,
+        errorElement: <Error />,
         children: [
             {
                 path: '/',
