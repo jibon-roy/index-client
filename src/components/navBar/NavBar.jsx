@@ -47,8 +47,8 @@ const NavBar = () => {
                         </div>
                         <div className="flex-none max-lg:hidden">
                             <ul className="menu main-nav gap-2 menu-horizontal">
-                                <Btn white>Register</Btn>
-                                <Btn >Login</Btn>
+                                <Btn white link={'/register'}>Register</Btn>
+                                <Btn link={'/login'}>Login</Btn>
                             </ul>
                         </div>
                         <SideBar sm isOpen={isOpen}></SideBar>

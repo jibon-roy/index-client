@@ -9,7 +9,9 @@ import routes from './utilities/routers/routes'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={routes} />
+      <div className='text-primary-black'>
+        <RouterProvider router={routes} />
+      </div>
     </AuthProvider>
   </React.StrictMode>,
 )
