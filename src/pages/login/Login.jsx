@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import Footer from "../../components/footer/Footer";
 
 
 const Login = () => {
     return (
-        <section className="text-primary-black bg-primary-white body-font">
+        <section className="text-primary-black flex flex-col justify-between min-h-screen bg-primary-white body-font">
             <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
                 <div className="lg:w-3/5 w-full md:w-1/2 md:pr-16 lg:pr-0 pr-0">
                     <div className="title-font font-medium text-3xl text-primary-white">
@@ -15,7 +16,7 @@ const Login = () => {
                     <p className="leading-relaxed text-center md:text-left text-2xl mt-4">Login to index. Share your skills, contact with friends and done jobs.</p>
                 </div>
                 <div className="lg:w-2/6 md:w-1/2 bg-white shadow-xl rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
-                    <h2 className="text-primary-blue text-xl font-semibold text-center title-font mb-5">Please Login</h2>
+                    <h2 className="text-primary-blue text-xl font-semibold text-center title-font mb-5">Login</h2>
                     <div className="relative mb-4">
                         <label htmlFor="email" className="leading-7 text-sm text-primary-black">Email<span className="text-[red]">*</span></label>
                         <input type="email" autoComplete="yes" id="email" name="email" required className="w-full bg-black rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-base-300 focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" />
@@ -28,6 +29,7 @@ const Login = () => {
                     <p className="text-md text-primary-black mt-3">Do not have an account? <Link to={'/register'} className="text-primary-blue font-medium hover:text-secondary-blue">Register Now!</Link></p>
                 </div>
             </div>
+            <Footer></Footer>
         </section>
     );
 };
