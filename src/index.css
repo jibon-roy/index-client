@@ -23,3 +23,11 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #176FAE;
 }
+
+
+
+.my-input::file-selector-button {
+    background-color: #1C98ED !important;
+    border: 0;
+    color: white;
+}
