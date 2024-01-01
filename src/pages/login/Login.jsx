@@ -2,21 +2,21 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import { FcGoogle } from "react-icons/fc";
 import moment from "moment";
-import { useEffect, useState } from "react";
+// import useAxiosPublic from "../../utilities/hooks/useAxiosPublic";
+// import { useQuery } from "@tanstack/react-query";
 // import axios from "axios";
 
 
 const Login = () => {
-    const [ipInfo, setIpInfo] = useState()
 
-    useEffect(() => {
-        fetch('https://ipinfo.io/json')
-            .then(res => res.json())
-            .then(data => setIpInfo(data))
-            .catch(err => {
-                console.log(err)
-            })
-    }, [])
+
+    // const { data: ipInfo } = useQuery({
+    //     queryKey: ['ipInfo'],
+    //     queryFn: async () => {
+    //         const ipData = await useAxiosPublic.get('/api/getIpAddress')
+    //         return ipData.data
+    //     }
+    // })
 
     const handleLoginSubmit = e => {
         e.preventDefault()
@@ -29,7 +29,7 @@ const Login = () => {
         const userAgent = navigator.userAgent;
 
         const loginInfo = {
-            email, password, lastLogIn, userAgent, ipInfo
+            email, password, lastLogIn, userAgent, /*ipInfo*/
         }
         console.log(loginInfo)
     }
