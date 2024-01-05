@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
 import Footer from "../../components/footer/Footer";
 import { FcGoogle } from "react-icons/fc";
+import { useForm } from "react-hook-form";
 
 
 const Register = () => {
+
+    const { handleSubmit, register } = useForm()
+    
+    const onSubmit = (data) => {
+        console.log(data)
+    }
+
     return (
         <section className="text-primary-black flex flex-col justify-between min-h-screen bg-primary-white body-font">
             <div className="container px-5 py-24 mx-auto flex flex-wrap items-center">
@@ -18,30 +26,32 @@ const Register = () => {
                 </div>
                 <div className="lg:w-2/6 md:w-1/2 bg-white shadow-xl rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
                     <h2 className="text-primary-blue text-xl font-semibold text-center title-font mb-5">Register</h2>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="relative mb-4">
                         <label htmlFor="name" className="leading-7 text-sm text-primary-black">Full name<span className="text-[red]">*</span></label>
-                        <input type="text" autoComplete="yes" placeholder="Jhon Doe" id="name" name="name" required className="w-full bg-black rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input {...register("name")} type="text" autoComplete="yes" placeholder="Jhon Doe" id="name" name="name" required className="w-full bg-black rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black px-3 leading-8 transition-colors duration-200 ease-in-out" />
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="email" className="leading-7 text-sm text-primary-black">Email<span className="text-[red]">*</span></label>
-                        <input type="email" autoComplete="yes" placeholder="example@mail.com" id="email" name="email" required className="w-full bg-black rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="email" autoComplete="yes" {...register("email")} placeholder="example@mail.com" id="email" name="email" required className="w-full bg-black rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black px-3 leading-8 transition-colors duration-200 ease-in-out" />
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="image" className="leading-7 text-sm text-primary-black">Profile picture<span className="text-[red]">*</span></label>
-                        <input type="file" autoComplete="yes" accept="image/png, image/gif, image/jpeg" id="image" name="image" required className="w-full bg-black my-input rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="file" autoComplete="yes" {...register("image")} accept="image/png, image/gif, image/jpeg" id="image" name="image" required className="w-full bg-black my-input rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black leading-8 transition-colors duration-200 ease-in-out" />
                     </div>
                     <div className="relative mb-4">
                         <label htmlFor="password" className="leading-7 text-sm text-primary-black">Password<span className="text-[red]">*</span></label>
-                        <input type="password" autoComplete="yes" placeholder="Password" id="password" name="password" required className="w-full bg-black rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input type="password" autoComplete="yes" {...register("password")} placeholder="Password" id="password" name="password" required className="w-full bg-black rounded border-[1px] border-solid border-primary-blue shadow-inner shadow-secondary-black focus:border-secondary-blue focus:ring-2 focus:ring-primary-blue text-base outline-none text-primary-black px-3 leading-8 transition-colors duration-200 ease-in-out" />
                     </div>
                     <div className="form-control mb-4">
-                        <label className="cursor-pointer flex gap-1">
-                            <input type="checkbox" defaultChecked className="" />
+                        <label htmlFor="check" className="cursor-pointer flex gap-1">
+                                <input id="check" type="checkbox" defaultChecked={true} {...register("checkedPrivicy")} className="" />
                             <span className="label-text">Agree with our <span className="text-primary-blue font-medium hover:text-secondary-blue">privacy policy.</span></span>
                         </label>
                     </div>
 
-                    <button className="text-primary-white transition active:scale-[0.98] font-medium bg-primary-blue border-secondary-blue border-0 py-2 px-8 focus:outline-none hover:bg-secondary-blue rounded text-lg">Register</button>
+                    <button className="text-primary-white w-full transition active:scale-[0.98] font-medium bg-primary-blue border-secondary-blue border-0 py-2 px-8 focus:outline-none hover:bg-secondary-blue rounded text-lg">Register</button>
+                   </form>
                     <p className="text-md text-primary-black mt-3">Already have an account? <Link to={'/login'} className="text-primary-blue font-medium hover:text-secondary-blue">Login Now!</Link></p>
 
                     <div className="divider">OR</div>
